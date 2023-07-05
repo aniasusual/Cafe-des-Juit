@@ -1,70 +1,27 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GUI of project
+<img width="1437" alt="Screenshot 2023-07-05 at 6 56 35 AM" src="https://github.com/aniasusual/Cafe-des-Juit/assets/82938725/8bed8db1-942e-41ba-a462-c1f019bc0488">
+<img width="1437" alt="Screenshot 2023-07-05 at 6 56 50 AM" src="https://github.com/aniasusual/Cafe-des-Juit/assets/82938725/f5e011b1-ecf9-45e4-8921-5291e9b307ac">
+<img width="1438" alt="Screenshot 2023-07-05 at 6 58 31 AM" src="https://github.com/aniasusual/Cafe-des-Juit/assets/82938725/8d45f1e9-4052-475a-ba9a-46990e9f8a28">
+<img width="1440" alt="Screenshot 2023-07-05 at 6 58 35 AM" src="https://github.com/aniasusual/Cafe-des-Juit/assets/82938725/eb00f186-cebd-4617-bc94-b669c4352306">
+<img width="1440" alt="Screenshot 2023-07-05 at 6 58 46 AM" src="https://github.com/aniasusual/Cafe-des-Juit/assets/82938725/8ba78e90-54bf-4b2b-92f7-7008a3ba770a">
+<img width="1440" alt="Screenshot 2023-07-05 at 6 59 04 AM" src="https://github.com/aniasusual/Cafe-des-Juit/assets/82938725/47a556bc-e0ad-4d94-b1f5-6bb6c1033301">
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features of the project
+1. The website is completely responsive.
+2. user can login and register.
+3. A dropping navbar with MyCart and logout option if the user has already logged in
+4. Menu is divided into different categories.
+5. User can order meal according to their wish.
+6. Uses mongoDb for database, reactJs library for frontend and expressJs for backend.
+7. Secured with json web tokens and hashing algorithm.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Steps to set up project in your local system
+1. git clone
+2. run "npm i" command for each folder i.e frontend and backend;
+3. run command npm start for frontend.
+4. run command nodemon index.js for backend.
