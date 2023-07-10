@@ -1,0 +1,17 @@
+
+  .carousel{ 
+    // max-height: 500px;
+    // height: 86vh;
+    margin-top: 2vh;
+    .carousel-item{
+        img{
+          object-fit: contain;
+          width: 100vw;
+          height: 86vh;
+
+        }
+    }
+
+  }
+
+
