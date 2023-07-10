@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 4000
-const mongoDB = require("../db")
+const mongoDB = require("./db")
 mongoDB();
 
 app.use((req,res, next)=>{
@@ -18,9 +18,9 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello World!')
 });
-app.use('/api', require("../routes/CreateUser"))
-app.use('/api', require("../routes/DisplayData"))
-app.use('/api', require("../routes/orderData"))
+app.use('/api', require("./routes/CreateUser"))
+app.use('/api', require("./routes/DisplayData"))
+app.use('/api', require("./routes/orderData"))
 
 
 app.listen(port, () => {
