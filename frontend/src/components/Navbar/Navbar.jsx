@@ -1,12 +1,20 @@
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./navbar.scss"
 import { Link, useNavigate } from 'react-router-dom';
-import user from "../../assets/user.jpeg"
-import Search from "../search/Search";
+// import user from "../../assets/user.jpeg"
+// import Search from "../search/Search";
+import Badge from 'react-bootstrap/Badge'
+import Model from "../../Model";
+import Cart from "../../pages/cart/Cart"
+import { useCart } from "../ContextReducer";
 
 function Navbar() {
+
+	const [cartview, setCartView] = useState(false);
+
+	let data = useCart();
 	const navRef = useRef();
 
 	const showNavbar = () => {
@@ -25,15 +33,15 @@ function Navbar() {
 	return (
 		<header>
 			<h3>Cafe des Juit</h3>
-			<Search/>
+			{/* <Search/> */}
 			<nav ref={navRef}>
                 
                 <h3>Cafe des Juit</h3>
-				<img src="https://source.unsplash.com/random/900×700/?restaurant" alt=""  cover/>
-				<Search/>
+				<img src="https://source.unsplash.com/random/900×700/?restaurant" alt=""  cover="true"/>
+				{/* <Search/> */}
 
 				{(localStorage.getItem("authToken"))?
-				<Link to="/" style={{textDecoration:"none"}}>
+				<Link to="/myOrders" style={{textDecoration:"none"}}>
                          <span>My orders</span>
                 </Link>
 				:""}
@@ -47,9 +55,13 @@ function Navbar() {
 				:
 				
 				<div>
-					<div className='btn btn-outline-warning'>
-						My cart
+					<div className='btn btn-outline-warning' onClick={()=>{setCartView(true)}}>
+						My cart{" "}
+						<Badge pill bg="danger" badge-primary="true">{data.length}</Badge>
 					</div>
+
+					{cartview? <Model onClose={()=>setCartView(false)}><Cart/></Model> : null}
+
 					<div className='btn btn-outline-danger' onClick={handleLogout}>
 						Logout
 					</div>
