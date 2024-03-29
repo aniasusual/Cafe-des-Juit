@@ -11,7 +11,8 @@ export default function MyOrder() {
         if (!userEmail) return; // Make sure userEmail is available
 
         try {
-            const response = await fetch("http://localhost:4000/api/myorderData", {
+            // const response = await fetch("http://localhost:4000/api/myorderData", {
+            const response = await fetch("https://cafe-des-juit.onrender.com/api/myorderData", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

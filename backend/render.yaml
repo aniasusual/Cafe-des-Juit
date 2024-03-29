@@ -1,0 +1,5 @@
+services:
+  - name: cafe-des-juit
+    type: web
+    buildCommand: npm install
+    startCommand: node app.js
