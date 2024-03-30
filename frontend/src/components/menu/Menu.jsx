@@ -9,16 +9,15 @@ const Menu = () => {
   const [foodItem, setfoodItem] = useState([]);
 
   const loadData = async () => {
-    // let response = await fetch("http://localhost:4000/api/foodData", {
-    let response = await fetch(
-      "https://cafe-des-juit.onrender.com/api/foodData",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    let response = await fetch("http://localhost:4000/api/foodData", {
+      // let response = await fetch(
+      //   "https://cafe-des-juit.onrender.com/api/foodData",
+      //   {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     response = await response.json();
 

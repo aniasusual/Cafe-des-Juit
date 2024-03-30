@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js", 
+    "dev": "nodemon index.js"
   },
   "author": "Animesh Dhillon",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.13.7",
     "@mui/material": "^5.13.7",
+    "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
     "express": "^4.18.2",
     "express-validator": "^7.0.1",
