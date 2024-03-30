@@ -9,8 +9,7 @@ mongoDB();
 // CORS middleware
 app.use((req, res, next) => {
   const allowedOrigins = [
-    "https://66086a799a3fbbe07c1d49f3--dazzling-syrniki-74fd74.netlify.app/",
-    "*",
+    "https://66086a799a3fbbe07c1d49f3--dazzling-syrniki-74fd74.netlify.app",
     "http://localhost:3000"
   ]; // Add your allowed URLs here
 
@@ -26,6 +25,7 @@ app.use((req, res, next) => {
   );
   next();
 });
+
 
 
 app.use(express.json());
