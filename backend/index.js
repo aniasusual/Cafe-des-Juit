@@ -8,7 +8,7 @@ mongoDB();
 
 // CORS middleware
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "https://6608683f773f5227025ea389--sparkly-custard-89fd23.netlify.app/");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
