@@ -8,13 +8,25 @@ mongoDB();
 
 // CORS middleware
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://6608683f773f5227025ea389--sparkly-custard-89fd23.netlify.app/");
+  const allowedOrigins = [
+    "https://6608683f773f5227025ea389--sparkly-custard-89fd23.netlify.app/",
+    "*",
+    "http://localhost:3000"
+  ]; // Add your allowed URLs here
+
+  const origin = req.headers.origin;
+
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
   next();
 });
+
 
 app.use(express.json());
 
