@@ -18,7 +18,7 @@ mongoDB();
 // CORS middleware
 app.use((req, res, next) => {
   // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000"); // Set to your frontend URL
-  res.setHeader("Access-Control-Allow-Origin", "https://660b9963b897807bfd2b8022--visionary-squirrel-a6ce4a.netlify.app/"); // Set to your frontend URL
+  res.setHeader("Access-Control-Allow-Origin", "https://660b9a48a1f59b7c6f292280--capable-pastelito-78c9f0.netlify.app"); // Set to your frontend URL
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
