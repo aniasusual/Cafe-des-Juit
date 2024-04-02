@@ -106,44 +106,5 @@ const MyOrder = () => {
 }
 // {"orderData":{"_id":"63024fd2be92d0469bd9e31a","email":"mohanDas@gmail.com","order_data":[[[{"id":"62ff20fbaed6a15f800125e9","name":"Chicken Fried Rice","qty":"4","size":"half","price":520},{"id":"62ff20fbaed6a15f800125ea","name":"Veg Fried Rice","qty":"4","size":"half","price":440}],"2022-08-21T15:31:30.239Z"],[[{"id":"62ff20fbaed6a15f800125f4","name":"Mix Veg Pizza","qty":"4","size":"medium","price":800},{"id":"62ff20fbaed6a15f800125f3","name":"Chicken Doub;e Cheeze Pizza","qty":"4","size":"regular","price":480}],"2022-08-21T15:32:38.861Z"]],"__v":0}}
 
-// import React, { useEffect, useState } from 'react'
-// import axios from "axios"
 
-
-// const MyOrder = () => {
-
-//     const [orderData, setorderData] = useState({});
-
-//     const fetchData = async () => {
-//         try {
-//             // const orderData = {
-//             //     // Your order data object here
-//             //     // For example:
-//             //     email: localStorage.getItem('userEmail')
-//             // };
-
-//             const { data } = await axios.post("http://localhost:4000/api/myorderData", { email: localStorage.getItem('userEmail') }, {
-//                 withCredentials: true, // Include credentials like cookies
-//                 headers: {
-//                     'Content-Type': 'application/json',
-//                     // 'Origin': 'http://localhost:3000/login' // Set the origin header
-//                 }
-//             });
-
-//             console.log("Response data:", data);
-//         } catch (error) {
-//             console.error("Error:", error);
-//         }
-//     }
-
-//     useEffect(() => {
-//         fetchData();
-//     }, [])
-
-
-//     return (
-//         <div>MyOrder</div>
-//     )
-// }
-
-// export default MyOrder;
+export default MyOrder;
