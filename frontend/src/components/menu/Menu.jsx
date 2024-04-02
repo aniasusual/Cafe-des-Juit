@@ -209,6 +209,8 @@ const Menu = () => {
                 );
               })
             : ""}
+
+          <Card />
         </div>
       </div>
     </div>
