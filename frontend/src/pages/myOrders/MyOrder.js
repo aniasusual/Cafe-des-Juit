@@ -12,7 +12,8 @@ const MyOrder = () => {
         console.log(localStorage.getItem('userEmail'))
 
         try {
-            const response = await fetch("http://localhost:4000/api/myorderData", {
+            // const response = await fetch("http://localhost:4000/api/myorderData", {
+            const response = await fetch("https://cafe-des-juit.onrender.com/api/myorderData", {
                 credentials: 'include',
                 Origin: "http://localhost:3000/login",
                 method: 'POST',
