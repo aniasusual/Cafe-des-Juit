@@ -9,13 +9,14 @@ const Menu = () => {
   const [foodItem, setfoodItem] = useState([]);
 
   const loadData = async () => {
-    let response = await fetch("http://localhost:4000/api/foodData", {
-      // let response = await fetch("https://cafe-des-juit.onrender.com/api/foodData",{
+    // let response = await fetch("http://localhost:4000/api/foodData", {
+    let response = await fetch("https://cafe-des-juit.onrender.com/api/foodData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-    });
+    }
+    );
 
     response = await response.json();
 
@@ -172,42 +173,42 @@ const Menu = () => {
         <div className="container">
           {foodCat.length > 0
             ? foodCat.map((data) => {
-                return (
-                  <div className="row mb-3 text-light" key={data._id}>
-                    <div className="fs-3">{data.CategoryName}</div>
-                    <hr />
+              return (
+                <div className="row mb-3 text-light" key={data._id}>
+                  <div className="fs-3">{data.CategoryName}</div>
+                  <hr />
 
-                    {foodItem.length > 0 ? (
-                      foodItem
-                        .filter(
-                          (item) =>
-                            item.CategoryName === data.CategoryName &&
-                            item.name
-                              .toLowerCase()
-                              .includes(search.toLocaleLowerCase())
-                        )
-                        .map((filterItems) => {
-                          return (
-                            <div
-                              className="col-12 col-md-6 col-lg-3"
-                              key={filterItems._id}
-                            >
-                              <Card
-                                foodName={filterItems.name}
-                                id={filterItems._id}
-                                options={filterItems.options[0]}
-                                imgSrc={filterItems.img}
-                                desc={filterItems.description}
-                              />
-                            </div>
-                          );
-                        })
-                    ) : (
-                      <div>No such data found</div>
-                    )}
-                  </div>
-                );
-              })
+                  {foodItem.length > 0 ? (
+                    foodItem
+                      .filter(
+                        (item) =>
+                          item.CategoryName === data.CategoryName &&
+                          item.name
+                            .toLowerCase()
+                            .includes(search.toLocaleLowerCase())
+                      )
+                      .map((filterItems) => {
+                        return (
+                          <div
+                            className="col-12 col-md-6 col-lg-3"
+                            key={filterItems._id}
+                          >
+                            <Card
+                              foodName={filterItems.name}
+                              id={filterItems._id}
+                              options={filterItems.options[0]}
+                              imgSrc={filterItems.img}
+                              desc={filterItems.description}
+                            />
+                          </div>
+                        );
+                      })
+                  ) : (
+                    <div>No such data found</div>
+                  )}
+                </div>
+              );
+            })
             : ""}
 
           <Card />
